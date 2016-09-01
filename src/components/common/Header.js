@@ -19,7 +19,7 @@ const Header = ({loading}) => {
             <Link to="/series" activeClassName="active">Series</Link>
           </li>
           <li>
-            <Link to="/about" activeClassName="active">Channels</Link>
+            <Link to="/channels" activeClassName="active">Channels</Link>
           </li>         
         </ul>
       </div>

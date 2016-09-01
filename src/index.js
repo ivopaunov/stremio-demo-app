@@ -8,6 +8,7 @@ import { Router, browserHistory } from 'react-router';
 import routes from './routes';
 import {loadSeries} from './actions/seriesActions';
 import {loadMovies} from './actions/moviesActions';
+import {loadChannels} from './actions/channelsActions';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './styles/styles.css'; 
@@ -17,6 +18,7 @@ import '../node_modules/toastr/build/toastr.min.css';
 const store = configureStore();
 store.dispatch(loadSeries());
 store.dispatch(loadMovies());
+store.dispatch(loadChannels());
 
 //console.log(store.getState());
 

@@ -1,5 +1,4 @@
 import * as types from './actionTypes';
-import courseApi from '../api/mockCourseApi';
 import {beginAjaxCall, ajaxCallError} from './ajaxStatusActions';
 import stremio from '../stremio/addons';
 
@@ -20,10 +19,10 @@ export function loadMovies() {
     //dispatch(beginAjaxCall());
     stremio.meta.find({ query: { type: "movie" }, limit: 20 }, function (err, res) {
 
-   console.log('load movies');
-   console.log(res);
+      //  console.log('load movies');
+      // console.log(res);
       if (err) {
-           console.log(err);
+        // console.log(err);
         throw (err);
       }
 
@@ -31,7 +30,7 @@ export function loadMovies() {
       const mapped = res.map((movie, index) => {
         return Object.assign({}, movie, {
           checked: getState().movies
-            .find((mov) => {        
+            .find((mov) => {
               return ((mov.imdb_id == movie.imdb_id) && (mov.checked == true ? true : false));
             }) ? true : false
         });
