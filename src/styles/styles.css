@@ -1,0 +1,201 @@
+/* Styles */
+
+body{
+  -webkit-background-size:100% auto;
+  -moz-background-size:100% auto;
+  background-size:100% auto;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size:cover;
+  background-image:url("/background-0.jpg");
+  background-attachment:fixed
+  }
+
+#app {
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #4d4d4d;
+  /*min-width: 550px;*/
+  /*max-width: 850px;*/
+  margin: 90px auto;
+  z-index: 9001;
+  position: relative;
+  display: block;
+}
+
+a.active {
+  color: orange;
+}
+
+
+video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.navbar.navbar-custom{
+  background-color: rgba(87,104,130,0.9);
+}
+
+.navbar{
+  border: 0;
+}
+
+.navbar-custom .navbar-nav>li>a {
+    color: #fff;
+}
+
+.navbar-custom .navbar-nav>li>a.active {
+    background-color:rgba(120,111,160,0.9);
+    color: #fff;
+}
+
+.navbar-custom .navbar-nav>li>a:hover {
+    background-color:rgba(75,83,122,0.9);
+    color: #fff;
+}
+
+
+
+.metas-list-container .meta-item {
+    margin: 20px;
+    right: 0;
+    display: inline-block;
+    background: rgba(138, 123, 158, 0.00);
+}
+
+    .metas-list-container .meta-item .meta-link {
+        display: block;
+        position: relative;
+        width: 180px;
+        height: 267px;
+        margin: 10px;
+    }
+
+        .metas-list-container .meta-item .meta-link .meta-hover {
+            background: rgba(87,104,130,0.8);
+            position: absolute;
+            width: 180px;
+            height: 267px;
+            opacity: 0;
+            -webkit-transition: all ease 0.5s;
+            -moz-transition: all ease 0.5s;
+            -o-transition: all ease 0.5s;
+            transition: all ease 0.5s;
+        }
+
+            .metas-list-container .meta-item .meta-link .meta-hover:hover {
+                opacity: 1;
+            }
+
+            .metas-list-container .meta-item .meta-link .meta-hover .meta-hover-content {
+                position: absolute;
+                width: 100%;
+                height: 20px;
+                font-size: 16px;
+                font-weight: 600;
+                text-align: center;
+                top: 30%;
+                margin-top: 0;
+                color: #fff;
+                padding: 5px;
+            }
+
+                .metas-list-container .meta-item .meta-link .meta-hover .meta-hover-content i {
+                    margin-top: 0;
+                }
+
+                .metas-list-container .meta-item .meta-link .meta-hover .meta-hover-content h3,
+                .metas-list-container .meta-item .meta-link .meta-hover .meta-hover-content h4 {
+                    margin: 0;
+                }
+
+    .metas-list-container .meta-item .meta-caption {
+        width: 180px;
+        height: 267px;
+        margin: 0 auto;
+        background-color: #3d3d3d;
+        text-align: center;
+        padding: 25px;
+    }
+
+        .metas-list-container .meta-item .meta-caption h4 {
+            text-transform: none;
+            margin:20px;
+        }
+
+        .metas-list-container .meta-item .meta-caption p {
+            font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-style: italic;
+            font-size: 12px;
+            margin: 10px;
+        }
+
+.metas-list-container * {
+    z-index: 2;
+}
+
+.metas-list-container .meta-link img {
+    width: 180px;
+    height: 267px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+@media (min-width: 767px) {
+    .metas-list-container .meta-item {
+        margin: 0;
+    }
+}
+/*
+@media(min-width: 320px) {
+    .metas-list-container .meta-item .meta-link {
+        width: 300px;
+        height: 445px;
+    }
+
+    .metas-list-container .meta-item .meta-caption {
+        width: 300px;
+        height: 445px;
+    }
+
+    .metas-list-container .meta-item .meta-link .meta-hover {
+        width: 300px;
+        height: 445px;
+    }
+
+    .metas-list-container .meta-link img {
+        width: 300px;
+        height: 445px;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+}*/
+
+.metas-list-container {
+    margin: 0 auto;
+    text-align: center;
+    /*text-align: center;*/
+}
+
+.meta-item .fav-mark{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+}
+
+p.vignette img {
+ display: block;
+}
+p.vignette:after {
+ -moz-box-shadow: inset 0 0 7em #111;  
+ -webkit-box-shadow: inset 0 0 7em #111;   
+ box-shadow: inset 0 0 7em #111;
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ z-index: 1;
+ content: "";
+}
