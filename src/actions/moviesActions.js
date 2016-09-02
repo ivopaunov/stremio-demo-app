@@ -17,7 +17,7 @@ export function loadMovies() {
     // console.log('load movies');
     // console.log(getState().movies);
     //dispatch(beginAjaxCall());
-    stremio.meta.find({ query: { type: "movie" }, limit: 20 }, function (err, res) {
+    stremio.stremioImdb.meta.find({ query: { type: "movie" }, limit: 20 }, function (err, res) {
 
       //  console.log('load movies');
       // console.log(res);

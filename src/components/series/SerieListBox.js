@@ -22,7 +22,7 @@ const SerieListBox = ({serie, onChange}) => {
             </div>
           </div>
         </div>
-        <span className="fa-stack fav-mark" onClick={(event) => onChange(event, serie) }>
+        <span className="fa-stack fav-mark" onClick={(event) => onChange(event, serie)}>
           <i className={serie.checked ? "fa fa-check-square-o fa-stack-2x" : "fa fa-square-o fa-stack-2x"}></i>
         </span>
         <p className="vignette">

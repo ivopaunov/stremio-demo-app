@@ -18,13 +18,13 @@ export function loadChannels() {
     // console.log(stremio);
     // dispatch(beginAjaxCall());
 
-    stremio.meta.find({ query: { type: "channel" }, limit: 5 }, function (err, res) {
+    stremio.stremioChannels.meta.find({ query: { type: "channel" }, limit: 20 }, function (err, res) {
 
-      console.log('res ');
-      console.log(res);
+     // console.log('res ');
+      //console.log(res);
 
       if (err) {
-        console.log(err);
+       // console.log(err);
        // throw (err);
       }
       if (res && res.length > 0) {
@@ -35,13 +35,12 @@ export function loadChannels() {
           return Object.assign({}, channel, {
             checked: getState().channels
             .find((cha) => {        
-              return ((cha.yt_id == channel.yu_id) && (cha.checked == true ? true : false));
-            }) ? true : false,
-            yt_id: index
+              return ((cha.yt_id == channel.yt_id) && (cha.checked == true ? true : false));
+            }) ? true : false
           });
         });
 
-        console.log(mapped);
+       // console.log(mapped);
 
         dispatch(loadsChannelsSuccess(mapped));
       }

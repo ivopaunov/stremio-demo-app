@@ -17,7 +17,7 @@ export function loadSeries() {
     // console.log('load series');
     // console.log(getState().series);
     //dispatch(beginAjaxCall());
-    stremio.meta.find({ query: { type: "series" }, limit: 20 }, function (err, res) {
+    stremio.stremioImdb.meta.find({ query: { type: "series" }, limit: 20 }, function (err, res) {
 
       if (err) {
         console.log(err);

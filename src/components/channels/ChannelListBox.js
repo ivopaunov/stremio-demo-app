@@ -11,18 +11,23 @@ const ChannelListBox = ({channel, onChange}) => {
             <div>
 
               <span className="fa-stack">
-                <i className="fa fa-play-circle-o fa-stack-2x"></i>
+                <i className="fa fa-youtube-play fa-stack-2x"></i>
               </span>
             </div>
             <br/>
             <div className=""><span>  {channel.name} </span> </div>
             <br/>
             <div className="text-center">
-              <span> <i className="fa fa-eye" aria-hidden="true"></i></span> &nbsp; <span>{channel.viewCount}</span>
+              <div>
+                <span> <i className="fa fa-user-plus " aria-hidden="true"></i></span> &nbsp; <span>{channel.popularity.toLocaleString('nu')}</span>
+              </div>
+              <div>
+                <span> <i className="fa fa-eye" aria-hidden="true"></i></span> &nbsp; <span>{channel.viewCount.toLocaleString('nu')}</span>
+              </div>
             </div>
           </div>
         </div>
-        <span className="fa-stack fav-mark" onClick={(event) => onChange(event, channel) }>
+        <span className="fa-stack fav-mark" onClick={(event) => onChange(event, channel)}>
           <i className={channel.checked ? "fa fa-check-square-o fa-stack-2x" : "fa fa-square-o fa-stack-2x"}></i>
         </span>
         <p className="vignette">
