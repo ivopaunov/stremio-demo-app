@@ -12,18 +12,21 @@ const Header = ({loading}) => {
       </div>
       <div className="collapse navbar-collapse" id="navbar-collapse-public">
         <ul className="nav navbar-nav ">
-          <li >
+          <li>
+            <IndexLink to="/" activeClassName="active">Home</IndexLink>
+          </li>
+          <li>
             <IndexLink to="/movies" activeClassName="active">Movies</IndexLink>
           </li>
-          <li >
+          <li>
             <Link to="/series" activeClassName="active">Series</Link>
           </li>
           <li>
             <Link to="/channels" activeClassName="active">Channels</Link>
-          </li>         
+          </li>
         </ul>
       </div>
-    </nav>  
+    </nav>
   );
 };
 

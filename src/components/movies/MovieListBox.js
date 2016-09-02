@@ -22,7 +22,7 @@ const MovieListBox = ({movie, onChange}) => {
             </div>
           </div>
         </div>
-        <span className="fa-stack fav-mark" onClick={(event) => onChange(event, movie) }>
+        <span className="fa-stack fav-mark" onClick={(event) => onChange(event, movie)}>
           <i className={movie.checked ? "fa fa-check-square-o fa-stack-2x" : "fa fa-square-o fa-stack-2x"}></i>
         </span>
         <p className="vignette">

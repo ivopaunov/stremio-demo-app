@@ -3,7 +3,7 @@ import ChannelListBox from './ChannelListBox';
 
 const ChannelsList = ({channels, onChange}) => {
   return (
-    <div  className="metas-list-container">
+    <div  className="metas-list-container square">
       <div className="row">
         {channels.map(channel =>
           <ChannelListBox key={channel.yt_id} channel={channel} onChange={onChange}/>

@@ -22,10 +22,15 @@ body{
   display: block;
 }
 
-a.active {
-  color: orange;
+.jumbotron{
+    border-radius: 0 !important;
+    background-color: rgba(120,111,160,0.7);
+    color: #fff;
 }
 
+.jumbotron a{
+    color: #fff;
+}
 
 video {
     display: inline-block;
@@ -71,6 +76,10 @@ video {
         margin: 10px;
     }
 
+    .metas-list-container.square .meta-item .meta-link {
+        width: 267px;
+    }
+
         .metas-list-container .meta-item .meta-link .meta-hover {
             background: rgba(87,104,130,0.8);
             position: absolute;
@@ -81,6 +90,10 @@ video {
             -moz-transition: all ease 0.5s;
             -o-transition: all ease 0.5s;
             transition: all ease 0.5s;
+        }
+
+        .metas-list-container.square .meta-item .meta-link .meta-hover {   
+            width: 267px;      
         }
 
             .metas-list-container .meta-item .meta-link .meta-hover:hover {
@@ -118,6 +131,23 @@ video {
         padding: 25px;
     }
 
+     .metas-list-container.square .meta-item .meta-caption {
+         width: 267px;
+    }
+    
+       .metas-list-container .meta-item .meta-caption {
+        width: 180px;
+        height: 267px;
+        margin: 0 auto;
+        background-color: #3d3d3d;
+        text-align: center;
+        padding: 25px;
+    }
+
+        .metas-list-container.square .meta-item .meta-caption {
+          width: 267px;     
+    }
+
         .metas-list-container .meta-item .meta-caption h4 {
             text-transform: none;
             margin:20px;
@@ -139,6 +169,10 @@ video {
     height: 267px;
     -o-object-fit: cover;
     object-fit: cover;
+}
+
+.metas-list-container.square .meta-link img {
+    width: 267px;
 }
 
 @media (min-width: 767px) {
